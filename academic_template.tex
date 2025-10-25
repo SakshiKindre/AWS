@@ -1,0 +1,295 @@
+% Professional Academic/Technical LaTeX Template
+% ==========================================
+
+% Document Class Declaration
+% -------------------------
+\documentclass[12pt,a4paper,twoside]{article}
+
+% Preamble with Essential Packages
+% -------------------------------
+% Page layout and margins
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+
+% Math packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+
+% Graphics and figures
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+
+% Bibliography and citations
+\usepackage[style=authoryear,backend=bibtex,natbib=true]{biblatex}
+\addbibresource{references.bib} % Replace with your .bib file
+
+% Typography and language
+\usepackage[english]{babel}
+\usepackage{microtype}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Hyperlinks and cross-references
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    citecolor=green,
+    pdftitle={Your Paper Title},
+    pdfauthor={Your Name},
+    pdfkeywords={keyword1, keyword2},
+}
+
+% Additional useful packages
+\usepackage{lipsum}  % For placeholder text
+\usepackage{enumitem}  % For customized lists
+\usepackage{xcolor}  % For colored text
+\usepackage{todonotes}  % For adding notes and todos
+
+% Custom commands and settings
+\newcommand{\eqref}[1]{(\ref{#1})}
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0.5em}
+
+% Document Information
+% -------------------
+\title{\textbf{Your Document Title}}
+\author{
+    Your Name\\
+    \texttt{your.email@example.com}\\
+    Your Institution
+}
+\date{\today}
+
+% Begin Document
+% -------------
+\begin{document}
+
+% Title Page
+\maketitle
+\thispagestyle{empty}
+
+% Abstract
+\begin{abstract}
+    \noindent This is the abstract of your document. It should provide a brief summary of the main points, methods, results, and conclusions of your work. The abstract should be concise (typically 150-250 words) and self-contained, as it may be read independently from the rest of the document.
+\end{abstract}
+
+% Table of Contents
+\newpage
+\tableofcontents
+\newpage
+
+% Introduction
+\section{Introduction}
+\label{sec:introduction}
+
+This is the introduction section of your document. Here, you should provide background information, state the problem or research question, explain the significance of your work, and outline the structure of the document.
+
+\lipsum[1-2] % Placeholder text
+
+% Literature Review / Background
+\section{Literature Review}
+\label{sec:literature}
+
+This section should review relevant literature and provide the theoretical background for your work. You should cite previous research appropriately using the citation commands.
+
+Previous research by \textcite{Smith2020} has shown that... Additionally, \textcite{Johnson2019} argued that...
+
+\lipsum[3] % Placeholder text
+
+% Methodology
+\section{Methodology}
+\label{sec:methodology}
+
+Describe your research methodology, experimental setup, or theoretical framework in this section.
+
+\subsection{Data Collection}
+\label{subsec:data_collection}
+
+Explain how you collected or generated your data.
+
+\lipsum[4] % Placeholder text
+
+\subsection{Analysis Techniques}
+\label{subsec:analysis}
+
+Describe the techniques and methods used to analyze your data.
+
+\lipsum[5] % Placeholder text
+
+% Mathematical Expressions and Equations
+\section{Mathematical Framework}
+\label{sec:math}
+
+This section demonstrates properly formatted mathematical expressions and equations.
+
+\subsection{Basic Equations}
+\label{subsec:basic_equations}
+
+Here is an example of an inline equation: $E = mc^2$. Below is a displayed equation:
+
+\begin{equation}
+    \label{eq:quadratic}
+    ax^2 + bx + c = 0
+\end{equation}
+
+The solution to the quadratic equation \eqref{eq:quadratic} is given by:
+
+\begin{equation}
+    \label{eq:quadratic_solution}
+    x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{equation}
+
+\subsection{Advanced Mathematics}
+\label{subsec:advanced_math}
+
+Here is an example of a more complex mathematical expression:
+
+\begin{align}
+    \label{eq:complex}
+    \nabla \times \vec{E} &= -\frac{\partial \vec{B}}{\partial t}\\
+    \nabla \times \vec{B} &= \mu_0 \vec{J} + \mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t}
+\end{align}
+
+And a matrix representation:
+
+\begin{equation}
+    \label{eq:matrix}
+    A = \begin{pmatrix}
+        a_{11} & a_{12} & a_{13} \\
+        a_{21} & a_{22} & a_{23} \\
+        a_{31} & a_{32} & a_{33}
+    \end{pmatrix}
+\end{equation}
+
+% Results
+\section{Results}
+\label{sec:results}
+
+Present your findings in this section. Use tables and figures to illustrate your results.
+
+\subsection{Main Findings}
+\label{subsec:main_findings}
+
+\lipsum[6] % Placeholder text
+
+% Example Table
+\begin{table}[htbp]
+    \centering
+    \caption{Sample Data Results}
+    \label{tab:sample_data}
+    \begin{tabular}{lccc}
+        \toprule
+        \textbf{Group} & \textbf{Variable 1} & \textbf{Variable 2} & \textbf{Variable 3} \\
+        \midrule
+        Group A & 12.3 & 45.6 & 78.9 \\
+        Group B & 23.4 & 56.7 & 89.0 \\
+        Group C & 34.5 & 67.8 & 90.1 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+As shown in Table \ref{tab:sample_data}, the results indicate...
+
+% Example Figure
+\begin{figure}[htbp]
+    \centering
+    % Replace with your actual figure
+    \fbox{\parbox{0.8\textwidth}{
+        \centering
+        [This is a placeholder for your figure]\\
+        Replace with \texttt{\textbackslash includegraphics\{your\_image.png\}}
+    }}
+    \caption{Sample Figure Caption}
+    \label{fig:sample_figure}
+\end{figure}
+
+Figure \ref{fig:sample_figure} illustrates the relationship between...
+
+% Multiple Subfigures Example
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \fbox{\parbox{0.9\textwidth}{
+            \centering
+            [Subfigure A]
+        }}
+        \caption{First subfigure}
+        \label{fig:subfig_a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \fbox{\parbox{0.9\textwidth}{
+            \centering
+            [Subfigure B]
+        }}
+        \caption{Second subfigure}
+        \label{fig:subfig_b}
+    \end{subfigure}
+    \caption{Example with multiple subfigures}
+    \label{fig:multiple_subfigs}
+\end{figure}
+
+% Discussion
+\section{Discussion}
+\label{sec:discussion}
+
+Interpret your results and discuss their implications in this section. Compare your findings with previous research and explain any discrepancies.
+
+\lipsum[7-8] % Placeholder text
+
+% Conclusion
+\section{Conclusion}
+\label{sec:conclusion}
+
+Summarize your main findings, discuss limitations, and suggest directions for future research.
+
+\lipsum[9] % Placeholder text
+
+% Acknowledgments
+\section*{Acknowledgments}
+\addcontentsline{toc}{section}{Acknowledgments}
+
+I would like to thank... [Add your acknowledgments here]
+
+% References
+\printbibliography
+\addcontentsline{toc}{section}{References}
+
+% Appendices
+\appendix
+\section{Additional Data}
+\label{app:additional_data}
+
+Include any supplementary material in the appendices.
+
+\lipsum[10] % Placeholder text
+
+\section{Mathematical Proofs}
+\label{app:proofs}
+
+Detailed mathematical proofs can be included here.
+
+\begin{proof}
+    This is an example of a mathematical proof.
+    \begin{align}
+        a &= b + c\\
+        &= d + e + c\\
+        &= f
+    \end{align}
+    Therefore, $a = f$.
+\end{proof}
+
+\end{document}
